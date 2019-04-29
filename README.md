@@ -70,3 +70,14 @@ scene.stylesheets.add("file:///" + f.absolutePath.replace("\\", "/"))
         return done;
     }
 ```
+
+
+## Adding Key Handlers to a JavaFX scene
+   ```kotlin
+   stage.addEventHandler(KeyEvent.KEY_PRESSED) { event ->
+       when (event.code) {
+           KeyCode.W -> println("W")
+           else -> {}
+       }
+   }
+```
