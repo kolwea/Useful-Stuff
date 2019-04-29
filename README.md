@@ -62,3 +62,11 @@ scene.stylesheets.add("file:///" + f.absolutePath.replace("\\", "/"))
         return line;
     }
 ```
+
+## Mapping one value range to another
+   ```javascript
+    public static double map(double value, double inMin, double inMax, double outMin, double outMax) {
+        double done = outMin + ((outMax - outMin) / (inMax - inMin)) * (value - inMin);
+        return done;
+    }
+```
