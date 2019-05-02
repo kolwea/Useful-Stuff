@@ -83,8 +83,7 @@ scene.stylesheets.add("file:///" + f.absolutePath.replace("\\", "/"))
 ```
 ## Binding Window title bar to Scene size
    ```kotlin
-        stage.titleProperty().bind(
-            scene.widthProperty().asString().concat(" : ")
-                .concat(scene.heightProperty().asString())
-        )
+   stage.titleProperty().bind(
+      scene.widthProperty().asString().concat(" : ")
+           .concat(scene.heightProperty().asString()))
 ```
