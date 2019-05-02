@@ -87,3 +87,14 @@ scene.stylesheets.add("file:///" + f.absolutePath.replace("\\", "/"))
       scene.widthProperty().asString().concat(" : ")
            .concat(scene.heightProperty().asString()))
 ```
+
+## setting Up A Timeline in JavaFX
+   ```kotlin
+    fun setupTimeline() {
+        val event = EventHandler<ActionEvent> { update() }
+        val keyframe = KeyFrame(Duration.millis(frameRate), event)
+        timeline = Timeline(keyframe)
+        timeline.cycleCount = Animation.INDEFINITE
+    }
+```
+
