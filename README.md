@@ -1,4 +1,6 @@
-# Useful-Stuff
+[Markdown CheatSheet](https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#links, "MD Cheatsheet")
+
+# Kotlin/Java
 A list of functions and algorithms I find myself using or looking for constantly.
 
 
@@ -97,4 +99,11 @@ scene.stylesheets.add("file:///" + f.absolutePath.replace("\\", "/"))
         timeline.cycleCount = Animation.INDEFINITE
     }
 ```
+
+# Terminal
+
+## Find & Kill Port Processess
+lsof -i : PORT
+kill -9 PID
+    
 
