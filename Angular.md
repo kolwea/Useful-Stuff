@@ -1,28 +1,27 @@
   
+  # Angular
   
-  constructor(private firestore: AngularFirestore) {
-    const newSong: Song = {songId: '1232131', songName: 'Ducks', votes: 0};
-    // this.addSongToDatabase(newSong);
-    console.log('Added Song to DB');
-  }
+  ## Firestore Setup
+  
+  constructor(private firestore: AngularFirestore) {}
 
   getSoundcloudData() {
     return this.firestore.collection('soundcloud').snapshotChanges();
   }
 
-  addSongToDatabase(data) {
+  addEntryToDatabase(data) {
     return new Promise<any>((resolve, reject) => {
       this.firestore
-        .collection('soundcloud')
+        .collection(<name>)
         .add(data)
         .then(res => {
         }, err => reject(err));
     });
   }
 
-  updateVoteCount(data) {
+  updateEntry(data) {
     return this.firestore
-      .collection('soundcloud')
+      .collection(<name>)
       .doc(data.payload.doc.id)
       .set({completed: true}, {merge: true});
   }
