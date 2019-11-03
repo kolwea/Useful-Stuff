@@ -3,10 +3,11 @@
   
   ## Firestore Setup
   
+  ```Typescript
   constructor(private firestore: AngularFirestore) {}
 
-  getSoundcloudData() {
-    return this.firestore.collection('soundcloud').snapshotChanges();
+  getData() {
+    return this.firestore.collection(<name>).snapshotChanges();
   }
 
   addEntryToDatabase(data) {
@@ -25,3 +26,6 @@
       .doc(data.payload.doc.id)
       .set({completed: true}, {merge: true});
   }
+
+   ```
+ 
